@@ -31,20 +31,22 @@
       <div class="container">
         <h1 class="text-center mt-2">Cose da fare</h1>
         <!-- Search-Bar -->
-
         <!-- <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="Cerca.." />
           <span class="input-group-text"
             ><i class="fa-solid fa-magnifying-glass"></i
           ></span>
         </div> -->
-        <div class="mb-3">
-         <ul class="list-unstyled">
-          <li v-for="task in tasks" class="mt-2"  :class="{ 'text-decoration-line-through': task.done }"  >
-            <input class="form-control" v-model="task.text" />
-          </li>
-         </ul>
-          </div>
+       <!-- List-group -->
+        <div class="d-flex justify-content-center">
+          <ul class="list-group list-item">
+            
+            <li v-for="task in tasks" :class="{ 'text-decoration-line-through': task.done }" class="list-group-item d-flex justify-content-between">
+             {{task.text}}
+             <button type="button" class="btn-close"></button>
+            </li>
+          </ul>
+        </div>
         </div>
       </div>
     </div>
