@@ -40,10 +40,9 @@
        <!-- List-group -->
         <div class="d-flex justify-content-center">
           <ul class="list-group list-item">
-            
-            <li v-for="task in tasks" :class="{ 'text-decoration-line-through': task.done }" class="list-group-item d-flex justify-content-between">
+            <li v-for="(task, i) in tasks" :class="{ 'text-decoration-line-through': task.done }" class="list-group-item d-flex justify-content-between">
              {{task.text}}
-             <button type="button" class="btn-close"></button>
+             <button type="button" class="btn-close" @click="removeTasks(task.id)"></button>
             </li>
           </ul>
         </div>

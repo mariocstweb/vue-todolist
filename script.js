@@ -10,6 +10,18 @@ const app = createApp({
       { id: 4, done: false, text: "Aggiornare il PC" },
     ],
   }),
+  methods: {
+    removeTasks(id) {
+      const newTasks = this.tasks.filter((task) => {
+        if (id !== task.id) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      this.tasks = newTasks;
+    },
+  },
 });
 
 app.mount("#root");
