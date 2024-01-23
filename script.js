@@ -21,6 +21,15 @@ const app = createApp({
       });
       this.tasks = newTasks;
     },
+    addTask() {
+      const newTask = {
+        id: 5,
+        done: false,
+        text: this.newTaskText,
+      };
+      this.tasks.push(newTask);
+      this.newTaskText = "";
+    },
   },
 });
 
