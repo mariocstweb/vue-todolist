@@ -40,7 +40,7 @@
         </div> -->
         <div class="mb-3">
          <ul class="list-unstyled">
-          <li v-for="task in tasks" class="mt-2"  >
+          <li v-for="task in tasks" class="mt-2"  :class="{ 'text-decoration-line-through': task.done }"  >
             <input class="form-control" v-model="task.text" />
           </li>
          </ul>
