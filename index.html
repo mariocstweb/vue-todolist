@@ -49,9 +49,12 @@
             <button class="btn btn-outline-success" type="button" @click="addTask">
               <i class="fas fa-plus"></i>
             </button>
+        
             </div>
           </ul>
         </div>
+        <h4 class="text-center" v-show="tasks.length === 0">Non ci sono più task</h4>
+
         </div>
       </div>
     </div>
