@@ -44,6 +44,12 @@
              {{task.text}}
              <button type="button" class="btn-close" @click="removeTasks(task.id)"></button>
             </li>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Aggiungi Task" v-model.trim="newTask">
+              <button class="btn btn-outline-success" type="button" @click>
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
           </ul>
         </div>
         </div>
