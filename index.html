@@ -30,13 +30,21 @@
     <div id="root">
       <div class="container">
         <h1 class="text-center mt-2">Cose da fare</h1>
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Recipient's username"
-          />
-          <span class="input-group-text">@example.com</span>
+        <!-- Search-Bar -->
+
+        <!-- <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Cerca.." />
+          <span class="input-group-text"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
+        </div> -->
+        <div class="mb-3">
+         <ul class="list-unstyled">
+          <li v-for="task in tasks" class="mt-2"  >
+            <input class="form-control" v-model="task.text" />
+          </li>
+         </ul>
+          </div>
         </div>
       </div>
     </div>
